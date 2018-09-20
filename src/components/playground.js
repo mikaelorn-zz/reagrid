@@ -9,4 +9,4 @@ export default class Playground extends React.Component {
           </div>
       );
    }
-}
+};
