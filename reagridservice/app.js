@@ -19,14 +19,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/grids', gridsRouter);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
-
 //allow cors from 8080
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:1337");
@@ -37,6 +29,16 @@ app.use(function(req, res, next) {
 	);
 	next();
 });
+
+app.use('/', indexRouter);
+app.use('/grids', gridsRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
