@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 export default class Playground extends React.Component {
    render() {
       return (
-          <div className="palyground">
+          <div className="playground">
             <h3>playground</h3>
           </div>
       );
