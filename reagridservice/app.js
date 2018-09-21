@@ -7,6 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var gridsRouter = require('./routes/grids');
 
+var Mongoose = require('mongoose');
+Mongoose.connect("mongodb+srv://reagrid_dbadmin:Salci8gQm@reagrid-bedug.mongodb.net/test?retryWrites=true");
+
 var app = express();
 
 // view engine setup

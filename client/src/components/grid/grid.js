@@ -15,7 +15,7 @@ export default class Grid extends React.Component {
     };
 
     componentDidMount() {
-        Axios.get("http://localhost:3000/grids/1")
+        Axios.get("http://localhost:3000/grids")
         .then((response) => { //arrow function to get to components this object
             console.log("grids/1 returns: " + JSON.stringify(response.data))
             this.setState({

@@ -5,17 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "node",
+            "request": "launch",
+            "name": "server",
+            "program": "${workspaceRoot}/reagridservice/bin/www",
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG": "reagridservice:*"
+            }
+        },
+        {
             "name": "Chrome",
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:1337",
             "webRoot": "${workspaceRoot}/client/src"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "server",
-            "program": "${workspaceFolder}/reagridservice\\app.js"
         }
     ]
 }
